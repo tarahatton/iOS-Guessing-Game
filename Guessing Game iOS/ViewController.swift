@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var userInput: UITextField!
     
     var randomNumber = Int(arc4random_uniform(100))
+    var userGuess: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +25,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
-
-
     @IBAction func guessingButton(_ sender: Any) {
+        userGuess = Int(userInput.text!)
+        print(userGuess)
+        
     }
+    
     
 
 }
