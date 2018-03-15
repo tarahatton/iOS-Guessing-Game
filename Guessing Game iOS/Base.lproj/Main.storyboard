@@ -1,24 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PartyLET.ttf">
+            <string>PartyLetPlain</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Guessing_Game_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Guess Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Do-3A-iAl">
+                                <rect key="frame" x="100" y="281" width="214" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5CA-mz-70G">
+                                <rect key="frame" x="158" y="383" width="98" height="68"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="48"/>
+                                <state key="normal" title="Guess!">
+                                    <color key="titleColor" red="0.35889648295374421" green="0.77781963832487311" blue="0.32168940525931611" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="guessingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4wH-LH-3Fc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5p-Ys-GlG">
+                                <rect key="frame" x="20" y="343" width="374" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.40713977654341393" green="0.77781963832487311" blue="0.31613467795444711" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4J-2T-b60">
+                                <rect key="frame" x="41" y="471" width="332" height="0.0"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="41"/>
+                                <color key="textColor" red="0.40068996775997084" green="0.77781963832487311" blue="0.32332278205496962" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUPER GUESS SIMULATOR 9000" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58i-mz-bO5">
+                                <rect key="frame" x="20" y="107" width="374" height="40"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="34"/>
+                                <color key="textColor" red="0.43306079232618083" green="0.77781963832487311" blue="0.39636017919030564" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAY-jW-mgn">
+                                <rect key="frame" x="41" y="489" width="48" height="61"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="42"/>
+                                <state key="normal" title="Yes">
+                                    <color key="titleColor" red="0.35814817511078689" green="0.77781963832487311" blue="0.21731059883588155" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="yesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ymm-o0-DdP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hl3-Dg-gyu">
+                                <rect key="frame" x="331" y="489" width="42" height="61"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="42"/>
+                                <state key="normal" title="No">
+                                    <color key="titleColor" red="0.35814817511078689" green="0.77781963832487311" blue="0.21731059883588155" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="noButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tDL-r5-eur"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.84269899017904937" blue="0.76451818310914466" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Hl3-Dg-gyu" firstAttribute="baseline" secondItem="PAY-jW-mgn" secondAttribute="baseline" id="1dG-Ti-vxP"/>
+                            <constraint firstItem="Hl3-Dg-gyu" firstAttribute="leading" secondItem="PAY-jW-mgn" secondAttribute="trailing" constant="242" id="2yL-kj-QnD"/>
+                            <constraint firstItem="5CA-mz-70G" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="FaB-xf-7Ak"/>
+                            <constraint firstItem="4Do-3A-iAl" firstAttribute="top" secondItem="58i-mz-bO5" secondAttribute="bottom" constant="134" id="KR1-s3-Wlb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Do-3A-iAl" secondAttribute="trailing" constant="100" id="NLM-Eq-M7Z"/>
+                            <constraint firstItem="J5p-Ys-GlG" firstAttribute="top" secondItem="4Do-3A-iAl" secondAttribute="bottom" constant="32.333333333333314" id="PON-Qm-VRK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J5p-Ys-GlG" secondAttribute="trailing" constant="20" id="VQD-k7-Xru"/>
+                            <constraint firstItem="4Do-3A-iAl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="arB-rW-mzh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z4J-2T-b60" secondAttribute="trailing" constant="41" id="bZ1-ni-awN"/>
+                            <constraint firstItem="58i-mz-bO5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="bsU-5m-1e1"/>
+                            <constraint firstItem="58i-mz-bO5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="87" id="dVk-2w-QCS"/>
+                            <constraint firstItem="PAY-jW-mgn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="iWU-bI-uVS"/>
+                            <constraint firstItem="58i-mz-bO5" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="j72-1a-XGL"/>
+                            <constraint firstItem="Z4J-2T-b60" firstAttribute="top" secondItem="5CA-mz-70G" secondAttribute="bottom" constant="20" id="kQu-dY-nV7"/>
+                            <constraint firstItem="5CA-mz-70G" firstAttribute="top" secondItem="J5p-Ys-GlG" secondAttribute="bottom" constant="20" id="nT1-kV-T9P"/>
+                            <constraint firstItem="Z4J-2T-b60" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="41" id="noO-ye-xX5"/>
+                            <constraint firstItem="PAY-jW-mgn" firstAttribute="top" secondItem="Z4J-2T-b60" secondAttribute="bottom" constant="18" id="q1e-1W-TSK"/>
+                            <constraint firstItem="J5p-Ys-GlG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tlS-ji-u8J"/>
+                            <constraint firstItem="J5p-Ys-GlG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="toM-fG-rp1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="noButton" destination="Hl3-Dg-gyu" id="wbt-TA-88f"/>
+                        <outlet property="rulesLabel" destination="J5p-Ys-GlG" id="cCJ-We-CSR"/>
+                        <outlet property="userFeedbackLabel" destination="Z4J-2T-b60" id="x5P-Kd-NLy"/>
+                        <outlet property="userInput" destination="4Do-3A-iAl" id="Kt9-dF-F6q"/>
+                        <outlet property="yesButton" destination="PAY-jW-mgn" id="4Wx-yM-X7X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-79.710144927536234" y="131.25"/>
         </scene>
     </scenes>
 </document>
